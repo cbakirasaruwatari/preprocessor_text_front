@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "react-vis": "^1.11.7",
+    "vx": "^0.0.1"
+  }
+}
