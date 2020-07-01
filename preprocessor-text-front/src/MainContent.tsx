@@ -9,8 +9,6 @@ import {
   Fab,
   Grid
 } from '@material-ui/core';
-
-// Material-UIアイコン取得
 import MailIcon from '@material-ui/icons/Mail';
 import ShareIcon from '@material-ui/icons/Share';
 import ListAlt from '@material-ui/icons/ListAlt';
@@ -24,7 +22,6 @@ import AddIcon from '@material-ui/icons/Add';
 import EditIcon from '@material-ui/icons/Edit';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
-// スタイルを適用する
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -41,75 +38,21 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
+type Props = {
+  input: string;
+};
+const MainContent: React.FC<Props> = (props) => {
 
-
-function MainContent() {
+    // const aaa = fetch("")
+    //   .then(response => {
+    //     return response.json();
+    //   })
 
   // CSSを適用する。
   const classes = useStyles();
 
   return (
         <Grid container className={classes.root} spacing={3}>
-          <Grid item xs={12} justify="center" >
-            <Paper variant="outlined" elevation={3} className={classes.paper}>
-              <Button variant="contained">Default</Button>
-              <Button variant="contained" color="primary">
-                Primary
-                </Button>
-              <Button variant="contained" color="secondary">
-                Secondary
-                </Button>
-              <Button variant="contained" disabled>
-                Disabled
-                </Button>
-              <Button variant="contained" color="primary" href="#contained-buttons">
-                Link
-                </Button>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} justify="center" >
-            <Paper variant="outlined" elevation={3} className={classes.paper}>
-              <Fab color="primary" aria-label="add">
-                <AddIcon />
-              </Fab>
-              <Fab color="secondary" aria-label="edit">
-                <EditIcon />
-              </Fab>
-              <Fab disabled aria-label="like">
-                <FavoriteIcon />
-              </Fab>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} justify="center" >
-            <Paper variant="outlined" elevation={3} className={classes.paper}>
-              <CircularProgress />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} justify="center" >
-            <Paper variant="outlined" elevation={3} className={classes.paper}>
-              <Badge badgeContent={4} color="primary">
-                <MailIcon fontSize="small" />
-              </Badge>
-              <Badge badgeContent={3} color="secondary">
-                <MailIcon />
-              </Badge>
-              <Badge badgeContent={2} color="error">
-                <MailIcon fontSize="large"/>
-              </Badge>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} justify="center" >
-            <Paper variant="outlined" elevation={3} className={classes.paper}>
-                <ShareIcon />
-                <ListAlt />
-                <PersonAdd />
-                <Lock />
-                <Chat />
-                <Assessment />
-                <CloudUpload />
-                <AssignmentTurnedIn />
-            </Paper>
-          </Grid>
         </Grid>
   );
 }
